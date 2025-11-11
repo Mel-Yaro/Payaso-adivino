@@ -1,10 +1,10 @@
 // Crear las listas de imágenes, títulos y frases
-/*const imagenes = [
-  "https://www.postposmo.com/wp-content/uploads/2020/09/Especies-end%C3%A9micas-de-colombia-3.jpg",
-  "https://www.postposmo.com/wp-content/uploads/2020/09/Especies-end%C3%A9micas-de-colombia-4.jpg",
-];*/
+const imagenes = [
+  "../assets/img/alcohol.jpeg",
+  "../assets/img/airelibre.jpeg",
+];
 
-const titulos = [
+const cuando = [
   "El próximo año",
   "En un mes",
   "En una semana",
@@ -88,7 +88,7 @@ const sentimientos = [
   "Sentirás mucha gratitud.",
   "Sentiras mucha diversión.",
 "Sentirás nostalgia por recuerdos.",
-"Sentirás sorpresa.",
+"Sentirás asombro.",
 "Sentirás curiosidad.",
 "Sentirás adrenalina.",
 "Sentirás ternura.",
@@ -132,8 +132,9 @@ const acontecimientos = [
   
 
 // Trae los elementos del HTML que tienen ese id
+const body = document.body;
 const imagen = document.getElementById("foto");
-const titulo = document.getElementById("titulo1");
+const tiempo = document.getElementById("fecha");
 const prediccion = document.getElementById("objetos");
 const prediccion1 = document.getElementById("sentidos");
 const prediccion2 = document.getElementById("futuro");
@@ -149,10 +150,11 @@ function generarPrediccion() {
   const indice = numeroRandom(0, cosas.length); // 0, 1, 2, 3
 
   // Reemplaza el texto del elemento 'titulo' por un título de la lista de títulos elegido aleatoriamente
-  titulo.innerText = titulos[indice]; // Entre los [] se pasa el número aleatorio generado arriba
+  tiempo.innerText = cuando[indice]; // Entre los [] se pasa el número aleatorio generado arriba
 
   // Reemplaza la imagen del elemento 'imagen' por una elegida aleatoriamente
- // imagen.src = imagenes[indice];
+  
+  body.style.backgroundImage = `url(${imagenes[numeroRandom(0, imagenes.length)]})`;
 
   // Reemplaza el texto del elemento 'predicción' por las frases elegidas aleatoriamente
   prediccion.innerHTML = `<p>${cosas[indice]}</p>`;
