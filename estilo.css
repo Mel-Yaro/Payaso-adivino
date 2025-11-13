@@ -7,7 +7,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-image: url("../assets/img/acto.jpeg");
+  background-image: url("../assets/img/luces.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -25,7 +25,7 @@ body {
   
   text-align: center;
   color: white;
- background-color: rgba(23, 0, 45, 0.59);
+ background-color: rgba(23, 0, 45, 0.742);
  background-size:auto;
   border: 5px  ;
   
