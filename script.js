@@ -190,7 +190,7 @@ const acontecimientos = [
 
 // Trae los elementos del HTML que tienen ese id
 const imagen = document.getElementById("foto");
-const titulo = document.getElementById("titulo1");
+const tiempo = document.getElementById("fecha");
 const prediccion = document.getElementById("objetos");
 const prediccion1 = document.getElementById("sentidos");
 const prediccion2 = document.getElementById("futuro");
@@ -206,10 +206,10 @@ function generarPrediccion() {
   const indice = numeroRandom(0, cosas.length); // 0, 1, 2, 3
 
   // Reemplaza el texto del elemento 'titulo' por un título de la lista de títulos elegido aleatoriamente
-  titulo.innerText = titulos[indice]; // Entre los [] se pasa el número aleatorio generado arriba
+  tiempo.innerText = titulos[indice]; // Entre los [] se pasa el número aleatorio generado arriba
 
   // Reemplaza la imagen del elemento 'imagen' por una elegida aleatoriamente
- // imagen.src = imagenes[indice];
+  imagen.src = imagenes[indice];
 
   // Reemplaza el texto del elemento 'predicción' por las frases elegidas aleatoriamente
   prediccion.innerHTML = `<p>${cosas[indice]}</p>`;
